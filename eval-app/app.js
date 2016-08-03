@@ -81,7 +81,7 @@
             },
             scrollInertia: 0
         };
-        $scope.screens = ['Fragen zusammenstellen','Frageblöcke bearbeiten','Fragebogen fertigstellen','Befragung durchfuhren','Befragung auswerten'];
+        $scope.screens = ['Fragen zusammenstellen','FrageblÃ¶cke bearbeiten','Fragebogen fertigstellen','Befragung durchfuhren','Befragung auswerten'];
         $scope.currentScreen = 0;
 
 
@@ -96,9 +96,9 @@
         // Default options for Itemloop
         var itemloops = [];
         itemloops.push({
-            name: 'Itempool - Umgang mit Heterogenität',
+            name: 'Itempool - Umgang mit HeterogenitÃ¤t',
             value: '0'
-        }, {name: 'Itempool - Qualitätsmanagement (Q2E)', value: '1'}, {name: 'Itempool - Schulführung', value: '2'});
+        }, {name: 'Itempool - QualitÃ¤tsmanagement (Q2E)', value: '1'}, {name: 'Itempool - SchulfÃ¼hrung', value: '2'});
         $scope.itemloops = itemloops;
         $scope.itemed = $scope.itemloops[0].value || 0;
 
@@ -735,12 +735,12 @@
                                 skale_tmp = skale_tmp.replace("+","%2B");
                                 skale_tmp = skale_tmp.replace("+","%2B");
                                 skale_tmp = skale_tmp.replace("+","%2B");
-                                skale_tmp = skale_tmp.replace("ö","oe");
-                                skale_tmp = skale_tmp.replace("ä","ae");
-                                skale_tmp = skale_tmp.replace("ü","ue");
-                                skale_tmp = skale_tmp.replace("Ö","Oe");
-                                skale_tmp = skale_tmp.replace("Ä","Ae");
-                                skale_tmp = skale_tmp.replace("Ü","Ue");
+                                skale_tmp = skale_tmp.replace("Ã¶","oe");
+                                skale_tmp = skale_tmp.replace("Ã¤","ae");
+                                skale_tmp = skale_tmp.replace("Ã¼","ue");
+                                skale_tmp = skale_tmp.replace("Ã–","Oe");
+                                skale_tmp = skale_tmp.replace("Ã„","Ae");
+                                skale_tmp = skale_tmp.replace("Ãœ","Ue");
 
                                 if(skale_tmp=="weiss nicht") {
                                     html_text_items += "<td width=25 align=center>&nbsp;</td>";
@@ -821,16 +821,16 @@
                     php_tmp += html_text_check;
                     php_tmp += html_text_items;
                     //hello
-                    var myPattern = '/ö/g';
+                    var myPattern = '/Ã¶/g';
                     php_tmp = php_tmp.replace(myPattern,"&ouml;");
-                    var myPattern = '/ä/g';
+                    var myPattern = '/Ã¤/g';
                     php_tmp = php_tmp.replace(myPattern,"&auml;");
-                    var myPattern = '/ü/g';
+                    var myPattern = '/Ã¼/g';
                     php_tmp = php_tmp.replace(myPattern,"&uuml;");
                     //trace(php_tmp);
-                    //php_tmp = php_tmp.replace("Ö","Oe");
-                    //php_tmp = php_tmp.replace("Ä","Ae");
-                    //php_tmp = php_tmp.replace("Ü","Ue");
+                    //php_tmp = php_tmp.replace("Ã–","Oe");
+                    //php_tmp = php_tmp.replace("Ã„","Ae");
+                    //php_tmp = php_tmp.replace("Ãœ","Ue");
 
                     //html_text += "<p>Quellen :</p>";
                     //html_text += "<table border=0 width=700>";
